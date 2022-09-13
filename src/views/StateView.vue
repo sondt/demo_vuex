@@ -19,6 +19,9 @@ export default {
   computed: {
     ...mapGetters(['getName'])
   },
+  updated() {
+    alert('updated')
+  },
   methods: {
     updateName() {
       this.$store.dispatch('setName', document.getElementById("name").value);
